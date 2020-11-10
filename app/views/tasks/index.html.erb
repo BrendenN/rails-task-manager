@@ -1,0 +1,6 @@
+<h1 class='mt-3 ml-5 mr-5' >My tasks</h1>
+<ul class="list-group list-group-flush">
+  <% @tasks.each do |task| %>
+    <li class='ml-4 mr-5 list-group-item'><%= link_to task.title, task_path(task) %> - <%= task.details %> - Completed: <%= task.completed %> <%= link_to 'delete', task_path(task), method: :delete %></li>
+  <% end %>
+</ul>
